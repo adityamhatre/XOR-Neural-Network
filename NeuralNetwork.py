@@ -15,7 +15,7 @@ class NeuralNetwork():
         return 1 / (1 + np.exp(-x))
 
     def sigmoid_derivative(self, x):
-        return sigmoid(x) * (1 - sigmoid(x))
+        return self.sigmoid(x) * (1 - self.sigmoid(x))
 
     def train(self, training_set_inputs, training_set_outputs, number_of_training_iterations):
         for iteration in range(number_of_training_iterations):
